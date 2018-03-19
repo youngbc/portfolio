@@ -1,0 +1,113 @@
+.row.vert-pad {
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+}
+
+.column.less-pads {
+  padding-right: 0.4375rem;
+  padding-left: 0.4375rem;
+}
+
+@media print, screen and (min-width: 64em){
+.position-left.reveal-for-large ~ .off-canvas-content {
+    margin-left: 320px;
+}
+}
+
+.off-canvas {
+  background: white;
+}
+
+.position-left {
+  width: 320px;
+}
+
+.position-left.is-transition-push {
+    box-shadow: inset -13px 0 20px -13px rgba(10, 10, 10, 0.05);
+}
+h1, h2, h3, h4, h5, h6 {
+      font-family: 'BenchNine', Arial, sans-serif;
+}
+h3.caption {
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+p.caption {
+  margin-bottom: 3rem;
+  color: #434343;
+}
+
+img.main-logo {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+.menu .menu-text {
+     padding: 0.7rem 1rem;
+  }
+
+  .accordion-menu .is-accordion-submenu a {
+      padding: 0.4rem 1rem;
+  }
+
+  .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 6px;
+    content: '';
+    border-bottom-width: 0;
+    border-top-style: solid;
+    border-color: #0a0a0a transparent transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -3px;
+    right: 10.5rem;
+}
+
+
+
+/* Trim */
+.hvr-trim {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+.hvr-trim:before {
+  content: '';
+  position: absolute;
+  border: white solid 4px;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  opacity: 0;
+  background: rgba(0,0,0, 0.1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.hvr-trim:hover:before, .hvr-trim:focus:before, .hvr-trim:active:before {
+  opacity: 1;
+}
+
+#test-hover:before {
+  content: 'Hello World';
+  text-align: center;
+  padding-top: 25%;
+  font-size: 2rem;
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+#test-hover:hover:before, #test-hover:focus:before, #test-hover:active:before {
+  opacity: 1;
+}
